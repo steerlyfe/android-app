@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:background="@drawable/white_button_less_round_design"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/app_logo" />
+
+    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="@string/message"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+        android:id="@+id/okText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/ok"
+        android:textColor="@color/gradient_start"
+        android:textSize="14sp" />
+</LinearLayout>

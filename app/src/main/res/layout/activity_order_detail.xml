@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activitiesPackage.OrdersActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/mainLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                android:id="@+id/orderId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                android:singleLine="true"
+                android:text="@string/orderId"
+                android:textColor="@color/grey"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/shippingAddressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="14dp"
+                    android:singleLine="true"
+                    android:text="@string/shipping"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/transparent_white_background_with_grey_stroke"
+                    android:orientation="vertical">
+
+                    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+                        android:id="@+id/shippingAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/shippingAddress"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                android:singleLine="true"
+                android:text="@string/billing"
+                android:textAllCaps="true"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/transparent_white_background_with_grey_stroke"
+                android:orientation="horizontal">
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+                    android:id="@+id/billing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toStartOf="@id/cardImage"
+                    android:text="@string/dummyCard"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/cardImage"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:contentDescription="@string/app_name"
+                    app:srcCompat="@drawable/visa_card_icon" />
+            </RelativeLayout>
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                android:singleLine="true"
+                android:text="@string/items"
+                android:textAllCaps="true"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/inflatedOrderInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" />
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                android:singleLine="true"
+                android:text="@string/summary"
+                android:textAllCaps="true"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/transparent_white_background_with_grey_stroke"
+                android:padding="6dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                tools:ignore="UselessParent">
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+                    android:id="@+id/subtotalText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@id/subtotalPrice"
+                    android:text="@string/subTotal"
+                    android:textColor="@color/pure_black" />
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                    android:id="@+id/subtotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/dummyPrice"
+                    android:textColor="@color/pure_black" />
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+                    android:id="@+id/shippingText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/subtotalText"
+                    android:layout_marginTop="4dp"
+                    android:layout_toStartOf="@id/shippingPrice"
+                    android:text="@string/shipping"
+                    android:textColor="@color/pure_black" />
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                    android:id="@+id/shippingPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/subtotalPrice"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/dummyPrice"
+                    android:textColor="@color/pure_black" />
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+                    android:id="@+id/taxText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shippingText"
+                    android:layout_marginTop="4dp"
+                    android:layout_toStartOf="@id/taxPrice"
+                    android:text="@string/tax"
+                    android:textColor="@color/pure_black" />
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                    android:id="@+id/taxPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shippingPrice"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/dummyPrice"
+                    android:textColor="@color/pure_black" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/taxPrice"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey" />
+
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+                    android:id="@+id/couponDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@id/couponDiscountPrice"
+                    android:text="@string/discount"
+                    android:textColor="@color/pure_black" />
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                    android:id="@+id/couponDiscountPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/dummyPrice"
+                    android:textColor="@color/pure_black" />
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+                    android:id="@+id/savingsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/couponDiscount"
+                    android:layout_marginTop="4dp"
+                    android:layout_toStartOf="@id/savingsPrice"
+                    android:text="@string/savings"
+                    android:textColor="@color/pure_black" />
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                    android:id="@+id/savingsPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/couponDiscountPrice"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/dummyPrice"
+                    android:textColor="@color/pure_black" />
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+                    android:id="@+id/totalText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/savingsText"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toStartOf="@id/totalCost"
+                    android:text="@string/totalCost"
+                    android:textColor="@color/pure_black" />
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                    android:id="@+id/totalCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/savingsPrice"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/dummyPrice"
+                    android:textColor="@color/pure_black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/buyAgainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                    android:id="@+id/checkOutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/black_background_round"
+                    android:gravity="center"
+                    android:padding="14dp"
+                    android:text="@string/buyAllItemsAgain"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/right_arrow" />
+            </RelativeLayout>
+
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/topLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="14dp"-->
+            <!--android:layout_marginEnd="4dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--tools:ignore="UselessParent">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="4dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@string/order"-->
+            <!--android:textAllCaps="true"-->
+            <!--android:textColor="@color/grey"-->
+            <!--android:textSize="12sp" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="4dp"-->
+            <!--android:layout_marginEnd="4dp"-->
+            <!--android:ellipsize="marquee"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="#"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:id="@+id/orderId"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="4dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@string/orderId"-->
+            <!--android:textColor="@color/pure_black"-->
+            <!--android:textSize="12sp" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="4dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@string/placedOn"-->
+            <!--android:textAllCaps="true"-->
+            <!--android:textColor="@color/grey"-->
+            <!--android:textSize="12sp" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="4dp"-->
+            <!--android:layout_marginEnd="4dp"-->
+            <!--android:ellipsize="marquee"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@string/colon"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:id="@+id/orderStatus"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="4dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@string/orderStatus"-->
+            <!--android:textColor="@color/pure_black"-->
+            <!--android:textSize="12sp" />-->
+            <!--</LinearLayout>-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/orderPlacedLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/topLayout"-->
+            <!--android:layout_marginStart="14dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginEnd="4dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="4dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@string/placedOn"-->
+            <!--android:textColor="@color/grey"-->
+            <!--android:textSize="12sp" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="4dp"-->
+            <!--android:layout_marginEnd="4dp"-->
+            <!--android:ellipsize="marquee"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@string/colon"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:id="@+id/placedOn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="4dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@string/placedOn"-->
+            <!--android:textColor="@color/pure_black"-->
+            <!--android:textSize="12sp" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<View-->
+            <!--android:id="@+id/view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_below="@id/orderPlacedLayout"-->
+            <!--android:layout_marginTop="12dp"-->
+            <!--android:background="@color/grey" />-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@string/productInfo"-->
+            <!--android:textColor="@color/pure_black"-->
+            <!--android:textSize="14sp" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginTop="12dp"-->
+            <!--android:background="@color/grey" />-->
+
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="@string/priceDetails"-->
+            <!--android:textColor="@color/pure_black"-->
+            <!--android:textSize="14sp" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginTop="12dp"-->
+            <!--android:background="@color/grey" />-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="14dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginEnd="14dp"-->
+            <!--android:padding="6dp"-->
+            <!--tools:ignore="UselessParent">-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular-->
+            <!--android:id="@+id/subtotalText"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toStartOf="@id/subtotalPrice"-->
+            <!--android:text="@string/subTotal"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular-->
+            <!--android:id="@+id/subtotalPrice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:text="@string/dummyPrice"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular-->
+            <!--android:id="@+id/productDiscount"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/subtotalText"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:layout_toStartOf="@id/productDiscountPrice"-->
+            <!--android:text="@string/productDiscount"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular-->
+            <!--android:id="@+id/productDiscountPrice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/subtotalPrice"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:text="@string/dummyPrice"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular-->
+            <!--android:id="@+id/couponDiscountText"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/productDiscount"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:layout_toStartOf="@id/couponDiscountPrice"-->
+            <!--android:text="@string/couponDiscount"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular-->
+            <!--android:id="@+id/couponDiscountPrice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/productDiscountPrice"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:text="@string/dummyPrice"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular-->
+            <!--android:id="@+id/totalDiscountText"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/couponDiscountText"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:layout_toStartOf="@id/totalDiscountPrice"-->
+            <!--android:text="@string/totalDiscount"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular-->
+            <!--android:id="@+id/totalDiscountPrice"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/couponDiscountPrice"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginTop="4dp"-->
+            <!--android:text="@string/dummyPrice"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:id="@+id/totalText"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/totalDiscountText"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginBottom="6dp"-->
+            <!--android:layout_toStartOf="@id/totalCost"-->
+            <!--android:text="@string/totalCost"-->
+            <!--android:textColor="@color/pure_black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:id="@+id/totalCost"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/totalDiscountPrice"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="@string/dummyPrice"-->
+            <!--android:textColor="@color/pure_black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+
+
+            <!--</RelativeLayout>-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular-->
+            <!--android:id="@+id/savingsText"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="20dp"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_marginEnd="20dp"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/dummyPrice"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

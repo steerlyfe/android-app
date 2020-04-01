@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topInnerLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:id="@+id/toolbarTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/skipText"
+            android:padding="16dp"
+            android:text="@string/tellUsAboutYou"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:id="@+id/skipText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:text="@string/skip"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/topInnerLinearLayout">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/blur_image" />
+
+        <LinearLayout
+            android:id="@+id/mainLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:elevation="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+                            android:id="@+id/questionDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_toStartOf="@id/questionNoLinear"
+                            android:padding="8dp"
+                            android:text="@string/dummyDescription"
+                            android:textColor="@color/pure_black" />
+
+                        <LinearLayout
+                            android:id="@+id/questionNoLinear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                                android:id="@+id/questionNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="6dp"
+                                android:paddingEnd="4dp"
+                                android:text="@string/one"
+                                android:textColor="@color/grey"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="4dp"
+                                android:text="@string/of"
+                                android:textColor="@color/grey"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                                android:id="@+id/totalQuestions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="4dp"
+                                android:text="@string/ten"
+                                android:textColor="@color/grey"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/blur_image" />
+
+                            <LinearLayout
+                                android:id="@+id/optionsInflatedLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </FrameLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--<androidx.cardview.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="4dp"-->
+            <!--android:elevation="10dp"-->
+            <!--app:cardBackgroundColor="@color/white"-->
+            <!--app:cardCornerRadius="20dp">-->
+
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="20dp"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginEnd="4dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/question"-->
+            <!--android:textColor="@color/pure_black"-->
+            <!--android:textSize="16sp" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/hash"-->
+            <!--android:textColor="@color/pure_black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:id="@+id/currentQuestionNo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="4dp"-->
+            <!--android:text="@string/one"-->
+            <!--android:textColor="@color/pure_black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/questionNoLinear"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:gravity="end"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:id="@+id/questionNo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingStart="6dp"-->
+            <!--android:paddingEnd="4dp"-->
+            <!--android:text="@string/one"-->
+            <!--android:textColor="@color/grey"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingStart="4dp"-->
+            <!--android:paddingEnd="4dp"-->
+            <!--android:text="@string/of"-->
+            <!--android:textColor="@color/grey"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+            <!--android:id="@+id/totalQuestions"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="10dp"-->
+            <!--android:paddingStart="4dp"-->
+            <!--android:paddingEnd="4dp"-->
+            <!--android:text="@string/ten"-->
+            <!--android:textColor="@color/grey"-->
+            <!--android:textSize="14sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular-->
+            <!--android:id="@+id/questionDesc"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:padding="8dp"-->
+            <!--android:text="@string/dummyDescription"-->
+            <!--android:textColor="@color/pure_black" />-->
+
+            <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:fillViewport="true">-->
+
+            <!--<FrameLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+
+            <!--<androidx.appcompat.widget.AppCompatImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/blur_image" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/optionsInflatedLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical" />-->
+            <!--</FrameLayout>-->
+
+            <!--</ScrollView>-->
+            <!--</LinearLayout>-->
+            <!--</androidx.cardview.widget.CardView>-->
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp">
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:id="@+id/previousButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/black_background_round"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/previousQuestion"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/black_background_round"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/nextQuestion"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="12dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

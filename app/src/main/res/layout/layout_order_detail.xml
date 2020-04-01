@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transparent_white_background_with_grey_stroke"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/bag" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/productImage"
+            android:orientation="vertical">
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                android:id="@+id/productName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/product_name"
+                android:textColor="@color/pure_black"
+                android:textSize="14sp" />
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                android:id="@+id/productPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/dummyAmount"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/dimen_11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:textColor="@color/pure_black"
+                        android:textSize="12sp" />
+
+                    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/colon"
+                        android:textColor="@color/pure_black" />
+
+                    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                        android:id="@+id/productQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:textColor="@color/pure_black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                        android:id="@+id/costWithQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:textColor="@color/pure_black"
+                        android:textSize="12sp" />
+
+                    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:text="="
+                        android:textColor="@color/pure_black" />
+
+                    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                        android:id="@+id/itemTotalCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:textColor="@color/pure_black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/blur_image"
+            android:scaleType="fitXY" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="14dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/leftLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toStartOf="@id/orderStatus"
+                        android:orientation="vertical">
+
+                        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/status"
+                            android:textColor="@color/pure_black"
+                            android:textSize="14sp" />
+
+                        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                            android:id="@+id/lastUpdatedAt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/status"
+                            android:textColor="@color/grey"
+                            android:textSize="13sp" />
+
+
+                    </LinearLayout>
+
+                    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+                        android:id="@+id/orderStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/transparent_white_background_with_grey_stroke"
+                        android:paddingStart="12dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/dispatched"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/stepLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.transferwise.sequencelayout.SequenceLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.transferwise.sequencelayout.SequenceStep
+                            android:id="@+id/orderPlacedStep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title="@string/orderPlaced" />
+
+                        <com.transferwise.sequencelayout.SequenceStep
+                            android:id="@+id/processingStep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title="@string/processing" />
+
+                        <com.transferwise.sequencelayout.SequenceStep
+                            android:id="@+id/dispatchedStep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title="@string/dispatched" />
+
+                        <com.transferwise.sequencelayout.SequenceStep
+                            android:id="@+id/deliveredStep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title="@string/delivered" />
+                    </com.transferwise.sequencelayout.SequenceLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/inStoreStepLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.transferwise.sequencelayout.SequenceLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.transferwise.sequencelayout.SequenceStep
+                            android:id="@+id/inStoreOrderPlacedStep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title="@string/orderPlaced" />
+
+                        <com.transferwise.sequencelayout.SequenceStep
+                            android:id="@+id/inStoreReadyToPickStep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title="@string/readyToPick" />
+
+                        <com.transferwise.sequencelayout.SequenceStep
+                            android:id="@+id/inStoreProcessingStep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:title="@string/productReceived" />
+                    </com.transferwise.sequencelayout.SequenceLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+        android:id="@+id/buyAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/white_background_with_black_stroke_round"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/buyAgain"
+        android:textAllCaps="true"
+        android:textColor="@color/pure_black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#911FDD</color>
+    <color name="colorPrimaryDark">#007FD6</color>
+    <color name="colorAccent">#007FD6</color>
+
+
+    <color name="gradient_start">#911FDD</color>
+    <color name="background_color">#F9F8FE</color>
+    <color name="gradient_center">#04BCB1</color>
+    <color name="gradient_end">#007FD6</color>
+    <color name="black">#333333</color>
+    <color name="pure_black">#000000</color>
+    <color name="transparent_black">#4D000000</color>
+    <color name="transparent_background">#66F9F8FE</color>
+    <color name="color_primary_transparent_background">#FCFDFE</color>
+    <color name="grey">#8D8C92</color>
+    <color name="white">#ffffff</color>
+
+    <color name="selectedTabBackground">#2f1BBBCB</color>
+    <color name="unselectedTabBackground">#FFFFFF</color>
+    <color name="editTextHint">#bfc0c6</color>
+    <color name="yellow">#FFC700</color>
+    <color name="very_light_grey">#e1e1e1</color>
+    <color name="light_grey">#EDEDED</color>
+    <color name="transparent_gradient_start_white">#26ffffff</color>
+    <color name="orange">#FF7F00</color>
+    <color name="transparent_color_primary_dark">#1A007FD6</color>
+
+</resources>

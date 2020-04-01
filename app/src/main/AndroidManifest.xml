@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.napworks.steerlyfeapp">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activitiesPackage.CouponsActivity"></activity>
+        <activity android:name=".spreedlyPackage.SpreedlyMainActivity" />
+        <activity android:name=".activitiesPackage.UpdateDataActivity" />
+        <activity android:name=".activitiesPackage.PostDetailActivity" />
+        <activity android:name=".activitiesPackage.AddAddressActivity" />
+        <activity android:name=".activitiesPackage.OrdersActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".activitiesPackage.ProductDetailActivity" />
+        <activity android:name=".activitiesPackage.OrderDetailActivity" />
+        <activity android:name=".activitiesPackage.BarcodeProductDetailActivity" />
+        <activity android:name=".activitiesPackage.QrCodeScanner" />
+        <activity android:name=".activitiesPackage.AddressActivity" />
+        <activity android:name=".activitiesPackage.FavoritesActivity" />
+        <activity android:name=".activitiesPackage.QuizQuestionsActivity" />
+        <activity android:name=".activitiesPackage.CountryCodeActivity" />
+        <activity android:name=".activitiesPackage.SearchActivity" />
+        <activity android:name=".activitiesPackage.ProductsActivity" />
+        <activity android:name=".activitiesPackage.StoreDetailActivity" />
+        <activity android:name=".activitiesPackage.SavedPostsActivity" />
+        <activity android:name=".activitiesPackage.ViewOrderedProductsActivity" />
+        <activity android:name=".activitiesPackage.RatingActivity" />
+        <activity android:name=".activitiesPackage.SubStoreProductsActivity" />
+        <activity android:name=".activitiesPackage.SignUpActivity" />
+        <activity android:name=".activitiesPackage.ParentActivity" />
+        <activity android:name=".activitiesPackage.VerifyMobileNumberActivity" />
+        <activity android:name=".activitiesPackage.CommonLoginSignUpActivity" />
+        <activity android:name=".activitiesPackage.NearByStoresActivity" />
+        <activity android:name=".activitiesPackage.MainActivity" />
+        <activity android:name=".activitiesPackage.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".firebasePackage.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".firebasePackage.MyFirebaseInstanceIDService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/map_api_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

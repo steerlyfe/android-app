@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/costLinear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <!--<com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold-->
+        <!--android:id="@+id/cancel"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="end"-->
+        <!--android:layout_marginEnd="20dp"-->
+        <!--android:background="@drawable/black_background_round"-->
+        <!--android:paddingTop="10dp"-->
+        <!--android:paddingBottom="10dp"-->
+        <!--android:paddingStart="30dp"-->
+        <!--android:paddingEnd="30dp"-->
+        <!--android:text="@string/removeCoupon"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="14sp"-->
+        <!--android:textStyle="bold" />-->
+
+    <LinearLayout
+        android:id="@+id/couponAppliedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/couponApplied"
+            android:textColor="@color/pure_black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:id="@+id/couponCode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/dummyAmount"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/orderCostLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/orderCost"
+            android:textColor="@color/pure_black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:id="@+id/orderCost"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/dummyAmount"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/couponDiscountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/couponDiscount"
+            android:textColor="@color/pure_black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:id="@+id/couponDiscount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/dummyAmount"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/totalCostLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/totalCost"
+            android:textColor="@color/pure_black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:id="@+id/totalCost"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/dummyAmount"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="4dp"
+    android:orientation="vertical">
+
+    <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+        android:id="@+id/ratingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="6dp"
+        android:gravity="center"
+        android:text="@string/rateYourProduct"
+        android:textAllCaps="true"
+        android:textColor="@color/pure_black"
+        android:textSize="14sp" />
+
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:numStars="5"
+        android:progressTint="@color/yellow"
+        android:rating="0.0"
+        android:stepSize="1"
+        android:theme="@style/RatingBar" />
+</LinearLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "688312365063",
+    "firebase_url": "https://steerlyfe-e2405.firebaseio.com",
+    "project_id": "steerlyfe-e2405",
+    "storage_bucket": "steerlyfe-e2405.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688312365063:android:5ce369859481999e8ffaa2",
+        "android_client_info": {
+          "package_name": "com.napworks.steerlyfeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688312365063-pcpnqu2eu3orc8jaelbmreia6ms3lrib.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.napworks.steerlyfeapp",
+            "certificate_hash": "89c673546df983dc6adabe0ace38766f580926a5"
+          }
+        },
+        {
+          "client_id": "688312365063-jfl9baqgpbtjndqto8qnj61ed2km8qtd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr8GoPABAZCvbwLN1t7ITlbDVqSxX5SNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688312365063-jfl9baqgpbtjndqto8qnj61ed2km8qtd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "688312365063-24cahcpanfn2vokf7cdmadtitj283hp2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.napworks.steerlyfeapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

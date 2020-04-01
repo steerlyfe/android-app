@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:id="@+id/mainLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="number"
+            android:padding="10dp"
+            android:text="@string/enterYourCode"
+            android:textColor="@color/pure_black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomEditTextRegular
+                android:id="@+id/first"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/color_primary_dark_border_thin_design"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="5"
+                android:maxLength="1"
+                android:padding="10dp"
+                android:textColor="@color/pure_black"
+                android:textSize="13sp" />
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomEditTextRegular
+                android:id="@+id/second"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/color_primary_dark_border_thin_design"
+                android:gravity="center"
+                android:inputType="number"
+                android:hint="3"
+                android:singleLine="true"
+                android:maxLength="1"
+                android:padding="10dp"
+                android:textColor="@color/pure_black"
+                android:textSize="13sp" />
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomEditTextRegular
+                android:id="@+id/third"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:hint="1"
+                android:background="@drawable/color_primary_dark_border_thin_design"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="1"
+                android:padding="10dp"
+                android:textColor="@color/pure_black"
+                android:textSize="13sp" />
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomEditTextRegular
+                android:id="@+id/fourth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/color_primary_dark_border_thin_design"
+                android:gravity="center"
+                android:hint="6"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="1"
+                android:padding="10dp"
+                android:textColor="@color/pure_black"
+                android:textSize="13sp" />
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomEditTextRegular
+                android:id="@+id/fifth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/color_primary_dark_border_thin_design"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:hint="4"
+                android:maxLength="1"
+                android:padding="10dp"
+                android:textColor="@color/pure_black"
+                android:textSize="13sp" />
+
+            <com.napworks.steerlyfeapp.fontPackage.CustomEditTextRegular
+                android:id="@+id/sixth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/color_primary_dark_border_thin_design"
+                android:hint="2"
+                android:gravity="center"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="1"
+                android:padding="10dp"
+                android:textColor="@color/pure_black"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:id="@+id/verifyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_design_color_primary_dark"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="@string/verify"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+            android:id="@+id/resendCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:text="@string/didntGetCode"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

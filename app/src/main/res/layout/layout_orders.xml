@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transparent_color_primary_dark_background_with_grey_stroke">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toStartOf="@id/rightLayout"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewBold
+            android:id="@+id/orderId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:text="@string/orderId"
+            android:textColor="@color/pure_black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+            android:id="@+id/orderDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:text="@string/orderDate"
+            android:textColor="@color/pure_black"
+            android:textSize="12sp" />
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+            android:id="@+id/noOfItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:text="@string/noOfItems"
+            android:textColor="@color/pure_black"
+            android:textSize="12sp" />
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+            android:id="@+id/orderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="4dp"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:text="@string/orderStatus"
+            android:textColor="@color/pure_black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rightLayout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@android:color/holo_orange_dark"
+        app:cardCornerRadius="5dp">
+
+        <com.napworks.steerlyfeapp.fontPackage.CustomTextViewRegular
+            android:id="@+id/orderRating"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/dummyAmount"
+            android:textColor="@color/pure_black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
